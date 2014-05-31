@@ -18,7 +18,7 @@ myMovieTxt = open('movieTxt', 'w')
 myWatchedMovie = []
 
 #抓取第一页的html内容
-myhtmlMovie0=urllib2.urlopen('http://movie.douban.com/people/'+userID+'/collect').read()
+myhtmlMovie0=urllib2.urlopen('http://movie.douban.com/people/'+str(userID)+'/collect').read()
 myhtmlMovie = re.findall('href="http://movie.douban.com/subject/\S{1,}?"', myhtmlMovie0)
 i = 0
 for link in myhtmlMovie:
@@ -34,7 +34,7 @@ for link in myhtmlMovie:
 start = 15
 while start <502:
 	print start
-	myhtmlMovieIte0 = urllib2.urlopen('http://movie.douban.com/people/'+userID'/collect?start=' + str(start) + '&sort=time&rating=all&filter=all&mode=grid').read()
+	myhtmlMovieIte0 = urllib2.urlopen('http://movie.douban.com/people/'+str(userID)+'/collect?start=' + str(start) + '&sort=time&rating=all&filter=all&mode=grid').read()
 	myhtmlMovieIte = re.findall('href="http://movie.douban.com/subject/\S{1,}?"', myhtmlMovieIte0)
 	i = 0
 	for link in myhtmlMovieIte:
