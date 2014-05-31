@@ -1,5 +1,4 @@
-doubanMovieReorder
-（豆瓣电影标注次数排序：增加筛选条件版）
+豆瓣电影标注次数排序：增加筛选条件版
 ==================
 
 As people not from Chinese has a fairly low chance of using douban, so I will use Chinese below. 
